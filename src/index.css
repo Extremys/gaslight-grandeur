@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Victorian Detective Game - Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Victorian Color Palette */
+    --background: 28 15% 6%;
+    --foreground: 32 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 12% 8%;
+    --card-foreground: 32 18% 88%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 12% 8%;
+    --popover-foreground: 32 18% 88%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Victorian Deep Blue-Green */
+    --primary: 195 100% 12%;
+    --primary-foreground: 32 20% 90%;
+    
+    /* Warm Amber */
+    --secondary: 45 85% 25%;
+    --secondary-foreground: 32 20% 90%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted Victorian Tones */
+    --muted: 30 8% 15%;
+    --muted-foreground: 32 12% 65%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 195 80% 18%;
+    --accent-foreground: 32 20% 90%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 75% 42%;
+    --destructive-foreground: 32 20% 90%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 30 8% 20%;
+    --input: 30 8% 18%;
+    --ring: 195 100% 25%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Victorian Gold Accent */
+    --gold: 45 95% 58%;
+    --gold-dark: 40 85% 35%;
+    
+    /* Fog/Mist Effects */
+    --mist: 200 15% 85%;
+    --shadow: 30 20% 5%;
 
-    --radius: 0.5rem;
+    /* Gradients */
+    --gradient-victorian: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-dark)));
+    --gradient-mist: linear-gradient(180deg, hsl(var(--mist) / 0.1), hsl(var(--shadow) / 0.8));
+    
+    /* Shadows */
+    --shadow-victorian: 0 20px 40px hsl(var(--shadow) / 0.8);
+    --shadow-lantern: 0 0 30px hsl(var(--gold) / 0.3);
+    
+    /* Animations */  
+    --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s ease-out;
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
