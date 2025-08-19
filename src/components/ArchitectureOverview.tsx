@@ -386,104 +386,188 @@ export const ArchitectureOverview = () => {
         </TabsContent>
 
         <TabsContent value="questions" className="space-y-6">
-          <Card className="border-destructive/20">
+          <Card className="border-gold/20">
             <CardHeader>
-              <CardTitle className="text-destructive">Critical Technical Questions</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="h-5 w-5 text-gold" />
+                Finalized Technical Specifications
+              </CardTitle>
               <CardDescription>
-                Please provide these details to finalize the architecture
+                Architecture tailored for 20-player real-time multiplayer
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-accent">Scale & Performance</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Concurrent players per game?</strong> (6-12 typical for social deduction)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Simultaneous games expected?</strong> (affects server architecture choice)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Target latency requirements?</strong> (critical for real-time interactions)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Platform support?</strong> (desktop/mobile browsers, PWA needs)</span>
-                    </li>
-                  </ul>
+                  <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
+                    <h4 className="font-semibold text-primary mb-3">✓ Scale Requirements</h4>
+                    <ul className="text-sm space-y-2">
+                      <li className="flex justify-between">
+                        <span>Players per game:</span>
+                        <Badge variant="secondary">20 concurrent</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Target platform:</span>
+                        <Badge variant="secondary">Web desktop</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Server architecture:</span>
+                        <Badge variant="secondary">Single instance</Badge>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
+                    <h4 className="font-semibold text-secondary mb-3">⚡ Performance Targets</h4>
+                    <ul className="text-sm space-y-2">
+                      <li className="flex justify-between">
+                        <span>Target latency:</span>
+                        <Badge variant="outline">&lt;100ms</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Server tick rate:</span>
+                        <Badge variant="outline">60 TPS</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Client render:</span>
+                        <Badge variant="outline">60 FPS</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Memory per player:</span>
+                        <Badge variant="outline">~50MB</Badge>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
+                
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-accent">Game Features</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Voice chat integration?</strong> (WebRTC complexity)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Spectator mode needed?</strong> (additional streaming requirements)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Private rooms/lobbies?</strong> (matchmaking complexity)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Cross-platform progression?</strong> (account system needs)</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-accent">Development Constraints</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Development timeline?</strong> (affects technology choices)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Team size & expertise?</strong> (React vs game engine knowledge)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Budget constraints?</strong> (cloud services, CDN costs)</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-accent">Technical Preferences</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Hosting preference?</strong> (self-hosted vs cloud services)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Real-time vs turn-based phases?</strong> (affects sync complexity)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-gold mt-1">•</span>
-                      <span><strong>Anti-cheat requirements?</strong> (server-side validation level)</span>
-                    </li>
-                  </ul>
+                  <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
+                    <h4 className="font-semibold text-accent mb-3">🎮 Feature Set</h4>
+                    <ul className="text-sm space-y-2">
+                      <li className="flex justify-between">
+                        <span>Voice chat:</span>
+                        <Badge variant="destructive">Not needed</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Spectator mode:</span>
+                        <Badge variant="secondary">✓ Included</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Private rooms:</span>
+                        <Badge variant="destructive">Not needed</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Anti-cheat:</span>
+                        <Badge variant="destructive">Not required</Badge>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-4 bg-gold/10 rounded-lg border border-gold/20">
+                    <h4 className="font-semibold text-gold mb-3">🔧 Development</h4>
+                    <ul className="text-sm space-y-2">
+                      <li className="flex justify-between">
+                        <span>Timeline:</span>
+                        <Badge variant="outline">No constraints</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Game mode:</span>
+                        <Badge variant="secondary">Real-time</Badge>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Hosting:</span>
+                        <Badge variant="outline">Flexible</Badge>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
+
+              {/* Network Architecture for 20 Players */}
+              <Card className="border-primary/20 bg-primary/5">
+                <CardHeader>
+                  <CardTitle className="text-primary">Optimized Network Architecture</CardTitle>
+                  <CardDescription>Designed specifically for 20-player capacity</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-background rounded-lg">
+                      <div className="text-2xl font-bold text-primary mb-2">20Hz</div>
+                      <div className="text-sm text-muted-foreground">Position updates</div>
+                    </div>
+                    <div className="text-center p-4 bg-background rounded-lg">
+                      <div className="text-2xl font-bold text-secondary mb-2">1KB/s</div>
+                      <div className="text-sm text-muted-foreground">Per player bandwidth</div>
+                    </div>
+                    <div className="text-center p-4 bg-background rounded-lg">
+                      <div className="text-2xl font-bold text-accent mb-2">20KB/s</div>
+                      <div className="text-sm text-muted-foreground">Total server load</div>
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 mt-4">
+                    <div>
+                      <h5 className="font-semibold mb-2">Message Types & Frequency</h5>
+                      <ul className="text-sm space-y-1">
+                        <li>• <code>PLAYER_MOVE</code> - 20Hz per player</li>
+                        <li>• <code>NPC_UPDATE</code> - 10Hz batch updates</li>
+                        <li>• <code>ITEM_INTERACT</code> - Event-driven</li>
+                        <li>• <code>CHAT_MESSAGE</code> - On demand</li>
+                        <li>• <code>VOTE_CAST</code> - Phase-based</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Optimization Techniques</h5>
+                      <ul className="text-sm space-y-1">
+                        <li>• Delta compression for state updates</li>
+                        <li>• Interest management (viewport culling)</li>
+                        <li>• Message batching & prioritization</li>
+                        <li>• Spectator-specific data streams</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Spectator Mode Details */}
+              <Card className="border-accent/20 bg-accent/5">
+                <CardHeader>
+                  <CardTitle className="text-accent">Spectator Mode Implementation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h5 className="font-semibold mb-2">Spectator Features</h5>
+                      <ul className="text-sm space-y-1">
+                        <li>• Full game state visibility</li>
+                        <li>• Free camera movement</li>
+                        <li>• Player role information overlay</li>
+                        <li>• Evidence tracking panel</li>
+                        <li>• Chat log with timestamps</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Technical Implementation</h5>
+                      <ul className="text-sm space-y-1">
+                        <li>• Separate WebSocket channel</li>
+                        <li>• Read-only game state updates</li>
+                        <li>• Optimized rendering for overview</li>
+                        <li>• No interaction with game objects</li>
+                        <li>• Delay buffer for fairness (optional)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </CardContent>
           </Card>
 
           <div className="flex gap-4 justify-center">
             <Button variant="victorian" size="lg">
-              Discuss Architecture Details
+              Begin Implementation Planning
             </Button>
             <Button variant="gold" size="lg">
-              Start Technical Planning
+              Setup Development Environment
             </Button>
           </div>
         </TabsContent>
